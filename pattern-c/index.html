@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KING MEAT｜神戸牛・黒毛和牛 一頭買い卸し直営店</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;600&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="https://www.kingmeat.net/" class="header__logo">
+        <img src="https://kingmeat.itembox.cloud/item/images/icon/logo.svg" alt="KING MEAT" width="160" height="40">
+      </a>
+      <nav class="header__nav" id="headerNav">
+        <ul class="header__nav-list">
+          <li><a href="https://www.kingmeat.net/c/all">商品一覧</a></li>
+          <li><a href="https://www.kingmeat.net/c/gift">ギフト</a></li>
+          <li><a href="https://www.kingmeat.net/f/guide">ご利用ガイド</a></li>
+          <li><a href="https://www.kingmeat.net/f/contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="https://www.kingmeat.net/cart" class="header__cart" aria-label="カート">
+          <img src="https://kingmeat.itembox.cloud/item/images/icon/cart.svg" alt="カート" width="24" height="24">
+        </a>
+        <button class="header__hamburger" id="hamburger" aria-label="メニュー">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu__overlay" id="menuOverlay"></div>
+    <div class="mobile-menu__panel">
+      <button class="mobile-menu__close" id="menuClose" aria-label="閉じる">
+        <span></span><span></span>
+      </button>
+      <nav class="mobile-menu__nav">
+        <a href="https://www.kingmeat.net/c/all">商品一覧</a>
+        <a href="https://www.kingmeat.net/c/yakiniku">焼肉</a>
+        <a href="https://www.kingmeat.net/c/steak">ステーキ</a>
+        <a href="https://www.kingmeat.net/c/sukiyaki">すき焼き</a>
+        <a href="https://www.kingmeat.net/c/shabu">しゃぶしゃぶ</a>
+        <a href="https://www.kingmeat.net/c/gift">ギフト</a>
+        <a href="https://www.kingmeat.net/f/guide">ご利用ガイド</a>
+        <a href="https://www.kingmeat.net/f/contact">お問い合わせ</a>
+        <a href="https://www.kingmeat.net/cart">カート</a>
+      </nav>
+      <div class="mobile-menu__phone">
+        <p>078-600-2996</p>
+        <span>営業時間 10:30〜17:30</span>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero__image">
+        <img src="https://kingmeat.itembox.cloud/item/images/top/08_kodawari.jpg" alt="King Meat こだわりの黒毛和牛" width="1920" height="800">
+      </div>
+      <div class="hero__text fade-in">
+        <h1 class="hero__title">最高の一皿を、あなたの食卓へ。</h1>
+        <div class="hero__line"></div>
+        <p class="hero__subtitle">神戸牛・黒毛和牛　一頭買い卸し直営店</p>
+        <a href="https://www.kingmeat.net/c/all" class="hero__cta">商品を探す</a>
+      </div>
+    </section>
+
+    <!-- ===== TRUST BAR ===== -->
+    <div class="trust-bar fade-in">
+      <ul>
+        <li>送料無料（15,000円以上）</li>
+        <li>最短翌日出荷</li>
+        <li>品質保証</li>
+      </ul>
+    </div>
+
+    <!-- ===== CATEGORIES ===== -->
+    <section class="section categories" id="categories">
+      <div class="container">
+        <div class="section__header fade-in">
+          <p class="section__label">Category</p>
+          <h2 class="section__title">カテゴリ</h2>
+        </div>
+        <div class="categories__grid">
+          <a href="https://www.kingmeat.net/c/yakiniku" class="category-card fade-in">
+            <div class="category-card__img">
+              <img src="https://kingmeat.itembox.cloud/item/images/banner/yakiniku_600.jpg" alt="焼肉" loading="lazy">
+            </div>
+            <div class="category-card__label">
+              <span>焼肉</span>
+            </div>
+          </a>
+          <a href="https://www.kingmeat.net/c/steak" class="category-card fade-in">
+            <div class="category-card__img">
+              <img src="https://kingmeat.itembox.cloud/item/images/banner/24_wagyusirloin_800.jpg" alt="ステーキ" loading="lazy">
+            </div>
+            <div class="category-card__label">
+              <span>ステーキ</span>
+            </div>
+          </a>
+          <a href="https://www.kingmeat.net/c/sukiyaki" class="category-card fade-in">
+            <div class="category-card__img">
+              <img src="https://kingmeat.itembox.cloud/item/images/banner/sukiyaki_600.jpg" alt="すき焼き" loading="lazy">
+            </div>
+            <div class="category-card__label">
+              <span>すき焼き</span>
+            </div>
+          </a>
+          <a href="https://www.kingmeat.net/c/shabu" class="category-card fade-in">
+            <div class="category-card__img">
+              <img src="https://kingmeat.itembox.cloud/item/images/banner/syabusyabu_600.jpg" alt="しゃぶしゃぶ" loading="lazy">
+            </div>
+            <div class="category-card__label">
+              <span>しゃぶしゃぶ</span>
+            </div>
+          </a>
+          <a href="https://www.kingmeat.net/c/gift" class="category-card fade-in">
+            <div class="category-card__img">
+              <img src="https://kingmeat.itembox.cloud/item/images/banner/gift_600.jpg" alt="ギフト" loading="lazy">
+            </div>
+            <div class="category-card__label">
+              <span>ギフト</span>
+            </div>
+          </a>
+          <a href="https://www.kingmeat.net/c/all" class="category-card fade-in">
+            <div class="category-card__img">
+              <img src="https://kingmeat.itembox.cloud/item/images/banner/block_800.jpg" alt="ブロック肉" loading="lazy">
+            </div>
+            <div class="category-card__label">
+              <span>ブロック肉</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PRODUCTS ===== -->
+    <section class="section section--alt products">
+      <div class="container">
+        <div class="section__header fade-in">
+          <p class="section__label">Recommend</p>
+          <h2 class="section__title">おすすめ</h2>
+        </div>
+        <div class="products__grid">
+          <a href="https://www.kingmeat.net/c/all" class="product-card fade-in">
+            <div class="product-card__img">
+              <img src="https://kingmeat.itembox.design/product/001/000000000118/000000000118-01-l.jpg" alt="A5サーロイン" loading="lazy">
+            </div>
+            <div class="product-card__info">
+              <h3 class="product-card__name">黒毛和牛 A5サーロイン</h3>
+              <p class="product-card__price">&yen;<span>6,980</span><small>（税込）</small></p>
+            </div>
+          </a>
+          <a href="https://www.kingmeat.net/c/all" class="product-card fade-in">
+            <div class="product-card__img">
+              <img src="https://kingmeat.itembox.design/product/000/000000000060/000000000060-01-l.jpg" alt="赤身すき焼き" loading="lazy">
+            </div>
+            <div class="product-card__info">
+              <h3 class="product-card__name">黒毛和牛 赤身すき焼き用</h3>
+              <p class="product-card__price">&yen;<span>4,980</span><small>（税込）</small></p>
+            </div>
+          </a>
+          <a href="https://www.kingmeat.net/c/all" class="product-card fade-in">
+            <div class="product-card__img">
+              <img src="https://kingmeat.itembox.design/product/001/000000000117/000000000117-01-l.jpg" alt="サーロインステーキ" loading="lazy">
+            </div>
+            <div class="product-card__info">
+              <h3 class="product-card__name">黒毛和牛 サーロインステーキ</h3>
+              <p class="product-card__price">&yen;<span>8,980</span><small>（税込）</small></p>
+            </div>
+          </a>
+          <a href="https://www.kingmeat.net/c/all" class="product-card fade-in">
+            <div class="product-card__img">
+              <img src="https://kingmeat.itembox.cloud/item/images/banner/toro_kuroge_600_k.jpg" alt="とろカルビ" loading="lazy">
+            </div>
+            <div class="product-card__info">
+              <h3 class="product-card__name">黒毛和牛 とろカルビ</h3>
+              <p class="product-card__price">&yen;<span>5,480</span><small>（税込）</small></p>
+            </div>
+          </a>
+        </div>
+        <div class="products__more fade-in">
+          <a href="https://www.kingmeat.net/c/all" class="btn-outline">すべての商品を見る</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== COMMITMENT ===== -->
+    <section class="section commitment">
+      <div class="container">
+        <div class="section__header fade-in">
+          <p class="section__label">Our Story</p>
+          <h2 class="section__title">私たちのこだわり</h2>
+        </div>
+
+        <div class="commitment__block fade-in">
+          <div class="commitment__img">
+            <img src="https://kingmeat.itembox.cloud/item/images/banner/mekikipro_800_nop.jpg" alt="セリ市場で直接仕入れ" loading="lazy">
+          </div>
+          <div class="commitment__text">
+            <span class="commitment__num">01</span>
+            <h3>セリ市場で直接仕入れ</h3>
+            <p>プロの目利きが全国のセリ市場に出向き、一頭一頭を厳選して直接仕入れ。中間業者を介さないからこそ実現できる、圧倒的な品質と価格でお届けします。</p>
+          </div>
+        </div>
+
+        <div class="commitment__block commitment__block--reverse fade-in">
+          <div class="commitment__img">
+            <img src="https://kingmeat.itembox.cloud/item/images/banner/best-rate_800.jpg" alt="安心・安全への取り組み" loading="lazy">
+          </div>
+          <div class="commitment__text">
+            <span class="commitment__num">02</span>
+            <h3>安心・安全への取り組み</h3>
+            <p>自社工場での一貫した加工・管理体制を実現。徹底した衛生管理と品質チェックにより、安心してお召し上がりいただける最高品質のお肉をお届けします。</p>
+          </div>
+        </div>
+
+        <div class="commitment__block fade-in">
+          <div class="commitment__img">
+            <img src="https://kingmeat.itembox.cloud/item/images/common/left_shop.jpg" alt="神戸の実店舗" loading="lazy">
+          </div>
+          <div class="commitment__text">
+            <span class="commitment__num">03</span>
+            <h3>神戸の実店舗から</h3>
+            <p>神戸に実店舗を構え、地元のお客様にも長年愛されてきた確かな味。店頭と同じ品質をオンラインでもお届けし、全国の食卓に最高の和牛体験をお届けします。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CAMPAIGN BANNERS ===== -->
+    <section class="section section--alt campaigns">
+      <div class="container">
+        <div class="section__header fade-in">
+          <p class="section__label">Campaign</p>
+          <h2 class="section__title">キャンペーン</h2>
+        </div>
+        <div class="campaigns__list">
+          <a href="https://www.kingmeat.net/c/all" class="campaign-banner fade-in">
+            <img src="https://kingmeat.itembox.cloud/item/image/banner/2505_kuro-50off_1080_new.jpg" alt="黒毛和牛50%OFFキャンペーン" loading="lazy">
+          </a>
+          <div class="campaigns__row">
+            <a href="https://www.kingmeat.net/c/all" class="campaign-banner fade-in">
+              <img src="https://kingmeat.itembox.cloud/item/images/banner/w-dice_cp50.jpg" alt="サイコロステーキキャンペーン" loading="lazy">
+            </a>
+            <a href="https://www.kingmeat.net/c/all" class="campaign-banner fade-in">
+              <img src="https://kingmeat.itembox.cloud/item/images/banner/w-sir-slice_cp30.jpg" alt="サーロインスライスキャンペーン" loading="lazy">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GIFT ===== -->
+    <section class="section gift">
+      <div class="container">
+        <div class="gift__inner fade-in">
+          <div class="gift__img">
+            <img src="https://kingmeat.itembox.cloud/item/images/banner/gift_600.jpg" alt="ギフト" loading="lazy">
+          </div>
+          <div class="gift__text">
+            <p class="section__label">Gift</p>
+            <h2 class="gift__title">大切な方へ、<br>最高級の贈り物を。</h2>
+            <p class="gift__desc">お歳暮・お中元・お祝いに。黒毛和牛の最高級ギフトで、特別な想いをお届けします。のし・メッセージカード対応。</p>
+            <a href="https://www.kingmeat.net/c/gift" class="btn-outline">ギフト商品を見る</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== QUALITY BANNER ===== -->
+    <section class="quality-banner fade-in">
+      <div class="quality-banner__inner">
+        <img src="https://kingmeat.itembox.cloud/item/images/banner/24_kuroge_700new.jpg" alt="黒毛和牛" class="quality-banner__bg" loading="lazy">
+        <div class="quality-banner__overlay">
+          <div class="quality-banner__content">
+            <p class="quality-banner__en">Premium Quality</p>
+            <h2>最高品質の黒毛和牛を<br>産地直送でお届けします</h2>
+            <a href="https://www.kingmeat.net/c/all" class="btn-white">商品一覧へ</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SHIPPING INFO ===== -->
+    <section class="section section--alt shipping">
+      <div class="container">
+        <div class="shipping__inner fade-in">
+          <img src="https://kingmeat.itembox.cloud/item/images/banner/freeshipping.jpg" alt="送料無料" class="shipping__img" loading="lazy">
+          <div class="shipping__text">
+            <h3>全国送料無料</h3>
+            <p>15,000円以上のご注文で送料無料。冷凍便でお届けします。</p>
+            <a href="https://www.kingmeat.net/f/guide" class="text-link">ご利用ガイドを見る &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__logo">
+        <img src="https://kingmeat.itembox.cloud/item/images/icon/logo.svg" alt="KING MEAT" width="140" height="36">
+      </div>
+      <nav class="footer__nav">
+        <a href="https://www.kingmeat.net/c/all">商品一覧</a>
+        <a href="https://www.kingmeat.net/c/yakiniku">焼肉</a>
+        <a href="https://www.kingmeat.net/c/steak">ステーキ</a>
+        <a href="https://www.kingmeat.net/c/sukiyaki">すき焼き</a>
+        <a href="https://www.kingmeat.net/c/shabu">しゃぶしゃぶ</a>
+        <a href="https://www.kingmeat.net/c/gift">ギフト</a>
+        <a href="https://www.kingmeat.net/f/guide">ご利用ガイド</a>
+        <a href="https://www.kingmeat.net/f/contact">お問い合わせ</a>
+      </nav>
+      <div class="footer__contact">
+        <p class="footer__phone">078-600-2996</p>
+        <p class="footer__hours">営業時間 10:30〜17:30</p>
+      </div>
+      <div class="footer__sns">
+        <a href="https://www.instagram.com/kingmeat.kobe/" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="https://kingmeat.itembox.cloud/item/images/common/icon_instagram_bk.svg" alt="Instagram" width="24" height="24">
+        </a>
+        <a href="#" target="_blank" rel="noopener" aria-label="LINE">
+          <img src="https://kingmeat.itembox.cloud/item/images/common/icon_line_bk.svg" alt="LINE" width="24" height="24">
+        </a>
+        <a href="#" target="_blank" rel="noopener" aria-label="Facebook">
+          <img src="https://kingmeat.itembox.cloud/item/images/common/icon_fb_bk.svg" alt="Facebook" width="24" height="24">
+        </a>
+      </div>
+      <p class="footer__copy">&copy; 2026 KING MEAT. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
