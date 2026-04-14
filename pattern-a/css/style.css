@@ -390,12 +390,13 @@ ul {
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;
-  min-height: 600px;
+  aspect-ratio: 21 / 9;
+  max-height: 560px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  margin-top: 72px;
 }
 
 .hero__bg {
@@ -408,18 +409,10 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  animation: kenBurns 25s ease-in-out infinite alternate;
-  will-change: transform;
+  object-position: center 30%;
 }
 
-@keyframes kenBurns {
-  0% {
-    transform: scale(1) translate(0, 0);
-  }
-  100% {
-    transform: scale(1.08) translate(-1%, -1%);
-  }
-}
+/* Ken Burns removed for POP layout */
 
 .hero__overlay {
   position: absolute;
@@ -494,17 +487,9 @@ ul {
   color: #fff;
 }
 
-/* Scroll Indicator */
+/* Scroll Indicator - hidden for compact hero */
 .hero__scroll {
-  position: absolute;
-  bottom: 32px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
+  display: none;
 }
 
 .hero__scroll-text {
@@ -1357,7 +1342,8 @@ ul {
 
 @media (max-width: 480px) {
   .hero {
-    min-height: 100svh;
+    aspect-ratio: 16 / 9;
+    max-height: 400px;
   }
 
   .hero__sub {
