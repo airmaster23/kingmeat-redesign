@@ -390,10 +390,12 @@ ul {
 .hero {
   width: 100%;
   margin-top: 72px;
+  min-height: calc(100vh - 72px);
   background: linear-gradient(135deg, #FFF5EC 0%, #FFEDE0 50%, #FFF0E6 100%);
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  justify-content: center;
   gap: 40px;
   padding: 60px 48px;
   max-width: 100%;
@@ -559,6 +561,7 @@ ul {
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   background: #fff;
+  aspect-ratio: 3 / 2;
 }
 
 .hero__img-sub-grid {
@@ -572,11 +575,13 @@ ul {
   overflow: hidden;
   box-shadow: var(--shadow-md);
   background: #fff;
+  aspect-ratio: 3 / 2;
 }
 
 .hero__img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
   transition: transform 0.6s var(--ease);
 }
@@ -612,11 +617,13 @@ ul {
 .category-card__img-wrap {
   overflow: hidden;
   border-radius: var(--radius-md);
+  aspect-ratio: 4 / 3;
 }
 
 .category-card__img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
   transition: transform 0.8s var(--ease);
 }
@@ -705,11 +712,13 @@ ul {
 
 .commitment__img-wrap {
   overflow: hidden;
+  aspect-ratio: 4 / 3;
 }
 
 .commitment__img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
   transition: transform 1s var(--ease);
 }
@@ -959,7 +968,8 @@ ul {
 
 .split-feature__img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
   transition: transform 1.2s var(--ease);
 }
@@ -1283,7 +1293,8 @@ ul {
 
   .commitment__img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
   }
 
@@ -1494,7 +1505,8 @@ ul {
 
   .commitment__img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
   }
 
