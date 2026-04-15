@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>King Meat TOPページ リニューアル - Futureshop組み込みガイド</title>
+<style>
+  body { font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif; max-width: 900px; margin: 0 auto; padding: 40px 24px; color: #333; line-height: 1.9; }
+  h1 { font-size: 1.6rem; border-bottom: 3px solid #D32F2F; padding-bottom: 12px; margin-bottom: 32px; }
+  h2 { font-size: 1.3rem; color: #D32F2F; margin-top: 48px; margin-bottom: 16px; padding-left: 12px; border-left: 4px solid #D32F2F; }
+  h3 { font-size: 1.1rem; margin-top: 24px; margin-bottom: 8px; }
+  .step { background: #FFF5EC; border-radius: 12px; padding: 24px; margin: 20px 0; }
+  .step-num { display: inline-block; background: #D32F2F; color: #fff; width: 32px; height: 32px; border-radius: 50%; text-align: center; line-height: 32px; font-weight: 700; margin-right: 8px; }
+  .warning { background: #FFF3CD; border-left: 4px solid #FF8F00; padding: 16px 20px; margin: 16px 0; border-radius: 0 8px 8px 0; }
+  .info { background: #E3F2FD; border-left: 4px solid #1976D2; padding: 16px 20px; margin: 16px 0; border-radius: 0 8px 8px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px 14px; text-align: left; }
+  th { background: #f5f5f5; font-weight: 600; }
+  code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+  .file-tree { background: #2E2215; color: #FFB74D; padding: 20px; border-radius: 8px; font-family: monospace; line-height: 1.6; }
+  .caution { color: #D32F2F; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<h1>King Meat TOPページ リニューアル<br>Futureshop 組み込みガイド</h1>
+
+<p>制作: RH Technology / 作成日: 2026年4月15日</p>
+
+<div class="info">
+<strong>このガイドについて</strong><br>
+本ガイドでは、TOPページのデザインリニューアルをFutureshopのコマースクリエイターに組み込む手順を説明します。<br>
+<strong>既存のショッピングカート・商品ページ・決済機能には一切影響しません。</strong>
+</div>
+
+<h2>納品物一覧</h2>
+
+<div class="file-tree">
+futureshop-delivery/<br>
+├── parts/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;← HTMLパーツ（6ファイル）<br>
+│ &nbsp; ├── 01_hero.html &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;← メインビジュアル<br>
+│ &nbsp; ├── 02_categories.html &nbsp;← 食べ方で選ぶ<br>
+│ &nbsp; ├── 03_commitment.html &nbsp;← こだわり<br>
+│ &nbsp; ├── 04_products.html &nbsp;&nbsp;&nbsp;← 人気の商品<br>
+│ &nbsp; ├── 05_campaigns.html &nbsp;&nbsp;← キャンペーン<br>
+│ &nbsp; └── 06_split_feature.html← ギフト・信頼<br>
+├── css/<br>
+│ &nbsp; └── km-custom.css &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;← カスタムCSS<br>
+├── images/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;← 画像ファイル（20枚）<br>
+└── 組み込みガイド.html &nbsp;&nbsp;&nbsp;&nbsp;← 本ファイル
+</div>
+
+<h2>STEP 1: 画像のアップロード</h2>
+
+<div class="step">
+<p><span class="step-num">1</span> Futureshop管理画面にログイン</p>
+<p><span class="step-num">2</span> <strong>コマースクリエイター → ファイルマネージャー</strong> を開く</p>
+<p><span class="step-num">3</span> <code>user_data</code> フォルダ内に <code>km-top</code> フォルダを新規作成</p>
+<p><span class="step-num">4</span> <code>images/</code> フォルダ内の画像20枚をすべてアップロード</p>
+</div>
+
+<h3>画像一覧</h3>
+<table>
+<tr><th>ファイル名</th><th>使用箇所</th><th>内容</th></tr>
+<tr><td>hero-main.jpg</td><td>メインビジュアル</td><td>和牛サーロイン（メイン画像）</td></tr>
+<tr><td>hero-sub1.jpg</td><td>メインビジュアル</td><td>セリ市場</td></tr>
+<tr><td>hero-sub2.jpg</td><td>メインビジュアル</td><td>ブロック肉</td></tr>
+<tr><td>category-yakiniku.jpg</td><td>カテゴリ</td><td>焼肉バナー</td></tr>
+<tr><td>hero-wagyu-sirloin.jpg</td><td>カテゴリ</td><td>ステーキバナー</td></tr>
+<tr><td>category-sukiyaki.jpg</td><td>カテゴリ</td><td>すき焼きバナー</td></tr>
+<tr><td>category-shabushabu.jpg</td><td>カテゴリ</td><td>しゃぶしゃぶバナー</td></tr>
+<tr><td>category-gift.jpg</td><td>カテゴリ / ギフト</td><td>ギフトバナー</td></tr>
+<tr><td>hero-block.jpg</td><td>カテゴリ / 特別な日</td><td>ブロック肉バナー</td></tr>
+<tr><td>hero-mekiki-pro.jpg</td><td>こだわり01</td><td>セリ市場で直接仕入れ</td></tr>
+<tr><td>commitment-best-rate.jpg</td><td>こだわり02</td><td>安心・安全</td></tr>
+<tr><td>commitment-shop.jpg</td><td>こだわり03</td><td>実店舗</td></tr>
+<tr><td>product-kobe-sirloin-sukiyaki.jpg</td><td>商品1位</td><td>神戸牛サーロイン すき焼き</td></tr>
+<tr><td>product-wagyu-akami-sukiyaki.jpg</td><td>商品2位</td><td>黒毛和牛 赤身すき焼き</td></tr>
+<tr><td>product-kobe-sirloin-steak.jpg</td><td>商品3位</td><td>神戸牛サーロインステーキ</td></tr>
+<tr><td>product-toro-karubi.jpg</td><td>商品4位</td><td>黒毛和牛 とろカルビ</td></tr>
+<tr><td>campaign-kuro-50off.jpg</td><td>キャンペーン</td><td>50%OFFバナー</td></tr>
+<tr><td>campaign-dice-cp50.jpg</td><td>キャンペーン</td><td>サイコロカットバナー</td></tr>
+<tr><td>campaign-sir-slice-cp30.jpg</td><td>キャンペーン</td><td>サーロインスライスバナー</td></tr>
+<tr><td>amazon-pay-badge.png</td><td>フッター</td><td>Amazon Payバッジ</td></tr>
+</table>
+
+<h2>STEP 2: CSSの登録</h2>
+
+<div class="step">
+<p><span class="step-num">1</span> <strong>コマースクリエイター → テーマ → CSS</strong> を開く</p>
+<p><span class="step-num">2</span> 「カスタムCSS」欄の<strong>末尾</strong>に、<code>km-custom.css</code> の内容をすべて貼り付け</p>
+<p><span class="step-num">3</span> 保存</p>
+</div>
+
+<div class="warning">
+<span class="caution">注意：</span> 既存のCSSは絶対に削除しないでください。必ず<strong>末尾に追記</strong>してください。<br>
+全クラス名に <code>km-</code> プレフィックスが付いているため、既存スタイルとの競合は発生しません。
+</div>
+
+<h2>STEP 3: フリーパーツの登録</h2>
+
+<div class="step">
+<p><span class="step-num">1</span> <strong>コマースクリエイター → パーツ → フリーパーツ</strong> を開く</p>
+<p><span class="step-num">2</span> 「フリーパーツを追加」をクリック</p>
+<p><span class="step-num">3</span> 以下の6つのパーツを順番に登録</p>
+</div>
+
+<table>
+<tr><th>パーツ名（任意）</th><th>ファイル</th><th>内容</th></tr>
+<tr><td>【TOP】メインビジュアル</td><td>01_hero.html</td><td>ヒーロー画像・キャッチコピー・CTAボタン</td></tr>
+<tr><td>【TOP】食べ方で選ぶ</td><td>02_categories.html</td><td>6カテゴリのカード</td></tr>
+<tr><td>【TOP】こだわり</td><td>03_commitment.html</td><td>3つのこだわりポイント</td></tr>
+<tr><td>【TOP】人気の商品</td><td>04_products.html</td><td>ランキング4商品</td></tr>
+<tr><td>【TOP】キャンペーン</td><td>05_campaigns.html</td><td>キャンペーンバナー3枚</td></tr>
+<tr><td>【TOP】ギフト・信頼</td><td>06_split_feature.html</td><td>ギフト案内＋安心ポイント</td></tr>
+</table>
+
+<h3>パーツ登録の手順（各パーツ共通）</h3>
+<div class="step">
+<p><span class="step-num">1</span> パーツ名を入力（例：【TOP】メインビジュアル）</p>
+<p><span class="step-num">2</span> 表示設定を「HTML」に切り替え</p>
+<p><span class="step-num">3</span> HTMLファイルの内容をコピー＆ペースト</p>
+<p><span class="step-num">4</span> HTML内の <code>{FS_IMG_PATH}</code> を実際の画像パスに置換</p>
+<p><span class="step-num">5</span> 保存</p>
+</div>
+
+<h3>画像パスの置換方法</h3>
+
+<div class="info">
+HTMLファイル内の <code>{FS_IMG_PATH}</code> を、ファイルマネージャーの実際のパスに置き換えてください。<br><br>
+<strong>例：</strong><br>
+変更前：<code>src="{FS_IMG_PATH}/hero-main.jpg"</code><br>
+変更後：<code>src="/user_data/km-top/hero-main.jpg"</code><br><br>
+※ 実際のパスはファイルマネージャーでアップロード後に確認できます。
+</div>
+
+<h2>STEP 4: レイアウトに配置</h2>
+
+<div class="step">
+<p><span class="step-num">1</span> <strong>コマースクリエイター → レイアウト → TOPページ</strong> を開く</p>
+<p><span class="step-num">2</span> 既存のTOPページパーツを確認（必要に応じてバックアップ）</p>
+<p><span class="step-num">3</span> 登録した6つのフリーパーツを上から順番に配置：</p>
+<p>&nbsp;&nbsp;&nbsp;① 【TOP】メインビジュアル</p>
+<p>&nbsp;&nbsp;&nbsp;② 【TOP】食べ方で選ぶ</p>
+<p>&nbsp;&nbsp;&nbsp;③ 【TOP】こだわり</p>
+<p>&nbsp;&nbsp;&nbsp;④ 【TOP】人気の商品</p>
+<p>&nbsp;&nbsp;&nbsp;⑤ 【TOP】キャンペーン</p>
+<p>&nbsp;&nbsp;&nbsp;⑥ 【TOP】ギフト・信頼</p>
+<p><span class="step-num">4</span> 保存</p>
+</div>
+
+<h2>STEP 5: プレビュー確認</h2>
+
+<div class="step">
+<p><span class="step-num">1</span> プレビュー機能でTOPページを確認</p>
+<p><span class="step-num">2</span> PC・スマートフォン両方で表示をチェック</p>
+<p><span class="step-num">3</span> 問題なければ本番に反映</p>
+</div>
+
+<h2>後から変更したい場合</h2>
+
+<table>
+<tr><th>変更したい内容</th><th>操作方法</th></tr>
+<tr><td>商品写真を差し替え</td><td>ファイルマネージャーで同じファイル名の画像を上書きアップロード</td></tr>
+<tr><td>テキスト・価格を変更</td><td>該当フリーパーツのHTMLを開き、テキスト部分を書き換え</td></tr>
+<tr><td>リンク先を変更</td><td>該当フリーパーツのHTMLを開き、<code>href="..."</code>の部分を書き換え</td></tr>
+<tr><td>キャンペーンバナー差替</td><td>ファイルマネージャーで画像を差し替え、またはHTMLのsrcを変更</td></tr>
+<tr><td>パーツの順番を変更</td><td>レイアウト画面でドラッグ＆ドロップ</td></tr>
+<tr><td>パーツを非表示にしたい</td><td>レイアウト画面で該当パーツを削除（パーツ自体は残ります）</td></tr>
+</table>
+
+<div class="warning">
+<span class="caution">注意事項：</span>
+<ul style="margin:8px 0 0 0;">
+<li>CSSの <code>km-custom.css</code> 部分は削除しないでください（デザインが崩れます）</li>
+<li>クラス名（<code>km-</code> で始まる部分）は変更しないでください</li>
+<li>画像を差し替える場合は、同じサイズまたは同じ比率の画像を使用してください</li>
+</ul>
+</div>
+
+<h2>お困りの場合</h2>
+<p>組み込みでご不明点がございましたら、お気軽にご連絡ください。</p>
+<p>
+RH Technology 久司<br>
+Mail: info@rh-inc.jp
+</p>
+
+</body>
+</html>
