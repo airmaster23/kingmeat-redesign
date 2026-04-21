@@ -1,6 +1,8 @@
 <!-- ============================================================
-     フリーパーツ 05: キャンペーンセクション
+     フリーパーツ 05: キャンペーン・イベントセクション
      - バナー画像3枚（キャンペーンごとに画像・リンク先を変更可能）
+     - #15 イベント情報の登録機能：現在非開催時は非表示、
+           開催時にHTMLコメントを外すだけで表示可能
      - キャンペーン終了時は該当の<a>タグごと削除してください
      ============================================================ -->
 <!-- ▼ 画像を変更する場合はsrc="..."の部分を書き換えてください ▼ -->
@@ -8,6 +10,7 @@
 <!-- ▼ リンク先を変更する場合はhref="..."の部分を書き換えてください ▼ -->
 
 <div class="km-wrapper">
+  <!-- ===== キャンペーン ===== -->
   <section class="km-campaigns km-section km-section--alt" id="campaigns">
     <div class="km-container">
       <div class="km-section-header km-fade-in">
@@ -30,4 +33,42 @@
       </div>
     </div>
   </section>
+
+  <!-- ===== イベント情報（#15） =====
+       ▼ イベント開催時は下記のHTMLコメントを外して表示してください ▼
+       ▼ イベント非開催時はコメントアウトしたままにしてください ▼ -->
+  <!--
+  <section class="km-events km-section" id="events">
+    <div class="km-container">
+      <div class="km-section-header km-fade-in">
+        <h2 class="km-section-title">イベント情報</h2>
+        <div class="km-section-line"></div>
+      </div>
+      <div class="km-events__grid">
+        <div class="km-event-card km-fade-in">
+          <div class="km-event-card__date">
+            <span class="km-event-card__month">0月</span>
+            <span class="km-event-card__day">00</span>
+          </div>
+          <div class="km-event-card__info">
+            <h3 class="km-event-card__title">イベントタイトルをここに入力</h3>
+            <p class="km-event-card__venue">会場名をここに入力</p>
+            <p class="km-event-card__desc">イベントの詳細説明をここに入力してください。</p>
+          </div>
+        </div>
+        <div class="km-event-card km-fade-in">
+          <div class="km-event-card__date">
+            <span class="km-event-card__month">0月</span>
+            <span class="km-event-card__day">00</span>
+          </div>
+          <div class="km-event-card__info">
+            <h3 class="km-event-card__title">イベントタイトルをここに入力</h3>
+            <p class="km-event-card__venue">会場名をここに入力</p>
+            <p class="km-event-card__desc">イベントの詳細説明をここに入力してください。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
 </div>

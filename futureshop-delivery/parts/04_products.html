@@ -1,7 +1,10 @@
 <!-- ============================================================
      フリーパーツ 04: 人気の商品セクション
-     - ランキング1〜3位 + 4位の商品カード
-     - 商品名・価格・画像・リンク先を変更可能
+     - メール指定の4商品に差し替え
+     - #11 黒毛和牛サーロインステーキ
+     - #12 神戸牛ラベル表示
+     - #13 黒毛和牛プレミアムロース焼肉
+     - #14 黒毛和牛特上霜降りロースすき焼き
      ============================================================ -->
 <!-- ▼ 画像を変更する場合はsrc="..."の部分を書き換えてください ▼ -->
 <!-- ▼ {FS_IMG_PATH} はFutureshopの画像アップロード先パスに置き換えてください（例: https://kingmeat.itembox.cloud/item/images/top/） ▼ -->
@@ -16,53 +19,55 @@
         <div class="km-section-line"></div>
       </div>
       <div class="km-products__grid">
-        <!-- ▼ 商品1（ゴールドバッジ） ▼ -->
+        <!-- ▼ 商品1（ゴールドバッジ）: A5等級 黒毛和牛 サーロインステーキ ▼ -->
         <div class="km-product-card km-fade-in">
           <div class="km-product-card__badge km-product-card__badge--gold">
             <span>1</span>
           </div>
-          <a href="https://www.kingmeat.net/c/sukiyaki" class="km-product-card__img-wrap">
-            <img src="{FS_IMG_PATH}/product-kobe-sirloin-sukiyaki.jpg" alt="A5神戸牛サーロイン すき焼き用" class="km-product-card__img" loading="lazy">
+          <a href="https://www.kingmeat.net/c/wagyu/w-sir-steak-600" class="km-product-card__img-wrap">
+            <img src="{FS_IMG_PATH}/product-wagyu-sirloin-steak.jpg" alt="A5等級 黒毛和牛 サーロインステーキ" class="km-product-card__img" loading="lazy">
           </a>
           <div class="km-product-card__info">
-            <h3 class="km-product-card__name">A5神戸牛サーロイン すき焼き用</h3>
-            <p class="km-product-card__price"><span class="km-product-card__yen">&yen;</span>6,980<span class="km-product-card__tax">（税込）</span></p>
+            <h3 class="km-product-card__name">A5等級 黒毛和牛 サーロインステーキ<br><small class="km-product-card__weight">合計400g</small></h3>
+            <p class="km-product-card__price"><span class="km-product-card__yen">&yen;</span>5,600<span class="km-product-card__tax">（税込）</span></p>
           </div>
         </div>
-        <!-- ▼ 商品2（シルバーバッジ） ▼ -->
+        <!-- ▼ 商品2（シルバーバッジ）: 神戸牛 赤身すき焼き・しゃぶしゃぶ用 ▼ -->
         <div class="km-product-card km-fade-in">
           <div class="km-product-card__badge km-product-card__badge--silver">
             <span>2</span>
           </div>
-          <a href="https://www.kingmeat.net/c/sukiyaki" class="km-product-card__img-wrap">
-            <img src="{FS_IMG_PATH}/product-wagyu-akami-sukiyaki.jpg" alt="黒毛和牛 赤身すき焼き用" class="km-product-card__img" loading="lazy">
+          <!-- ▼ #12 神戸牛ラベル ▼ -->
+          <span class="km-product-card__label km-product-card__label--kobe">神戸牛</span>
+          <a href="https://www.kingmeat.net/c/kobe/kobe-akami" class="km-product-card__img-wrap">
+            <img src="{FS_IMG_PATH}/product-kobe-akami-sukiyaki.jpg" alt="神戸牛 赤身すき焼き・しゃぶしゃぶ用" class="km-product-card__img" loading="lazy">
           </a>
           <div class="km-product-card__info">
-            <h3 class="km-product-card__name">黒毛和牛 赤身すき焼き用</h3>
-            <p class="km-product-card__price"><span class="km-product-card__yen">&yen;</span>4,980<span class="km-product-card__tax">（税込）</span></p>
+            <h3 class="km-product-card__name">神戸牛 赤身すき焼き・しゃぶしゃぶ用<br><small class="km-product-card__weight">500g</small></h3>
+            <p class="km-product-card__price"><span class="km-product-card__yen">&yen;</span>5,500<span class="km-product-card__tax">（税込）</span></p>
           </div>
         </div>
-        <!-- ▼ 商品3（ブロンズバッジ） ▼ -->
+        <!-- ▼ 商品3（ブロンズバッジ）: A5等級 黒毛和牛 プレミアムロース 焼肉用 ▼ -->
         <div class="km-product-card km-fade-in">
           <div class="km-product-card__badge km-product-card__badge--bronze">
             <span>3</span>
           </div>
-          <a href="https://www.kingmeat.net/c/steak" class="km-product-card__img-wrap">
-            <img src="{FS_IMG_PATH}/product-kobe-sirloin-steak.jpg" alt="A5神戸牛サーロインステーキ" class="km-product-card__img" loading="lazy">
+          <a href="https://www.kingmeat.net/c/wagyu/w-sir-yaki" class="km-product-card__img-wrap">
+            <img src="{FS_IMG_PATH}/product-wagyu-premium-rosu-yakiniku.jpg" alt="A5等級 黒毛和牛 プレミアムロース 焼肉用" class="km-product-card__img" loading="lazy">
           </a>
           <div class="km-product-card__info">
-            <h3 class="km-product-card__name">A5神戸牛サーロインステーキ</h3>
-            <p class="km-product-card__price"><span class="km-product-card__yen">&yen;</span>8,980<span class="km-product-card__tax">（税込）</span></p>
+            <h3 class="km-product-card__name">A5等級 黒毛和牛 プレミアムロース 焼肉用<br><small class="km-product-card__weight">400g</small></h3>
+            <p class="km-product-card__price"><span class="km-product-card__yen">&yen;</span>4,600<span class="km-product-card__tax">（税込）</span></p>
           </div>
         </div>
-        <!-- ▼ 商品4（バッジなし） ▼ -->
+        <!-- ▼ 商品4（バッジなし）: A5等級 黒毛和牛 特上霜降ロース すき焼き・しゃぶしゃぶ用 ▼ -->
         <div class="km-product-card km-fade-in">
-          <a href="https://www.kingmeat.net/c/yakiniku" class="km-product-card__img-wrap">
-            <img src="{FS_IMG_PATH}/product-toro-karubi.jpg" alt="黒毛和牛 とろカルビ" class="km-product-card__img" loading="lazy">
+          <a href="https://www.kingmeat.net/c/wagyu/w-sir-slice" class="km-product-card__img-wrap">
+            <img src="{FS_IMG_PATH}/product-wagyu-shimofuri-rosu-sukiyaki.jpg" alt="A5等級 黒毛和牛 特上霜降ロース すき焼き・しゃぶしゃぶ用" class="km-product-card__img" loading="lazy">
           </a>
           <div class="km-product-card__info">
-            <h3 class="km-product-card__name">黒毛和牛 とろカルビ</h3>
-            <p class="km-product-card__price"><span class="km-product-card__yen">&yen;</span>5,480<span class="km-product-card__tax">（税込）</span></p>
+            <h3 class="km-product-card__name">A5等級 黒毛和牛 特上霜降ロース スライス<br>すき焼き・しゃぶしゃぶ用<br><small class="km-product-card__weight">400g</small></h3>
+            <p class="km-product-card__price"><span class="km-product-card__yen">&yen;</span>4,600<span class="km-product-card__tax">（税込）</span></p>
           </div>
         </div>
       </div>

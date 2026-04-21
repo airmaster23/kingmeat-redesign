@@ -1554,3 +1554,231 @@
     padding-top: 56px;
   }
 }
+
+/* ========================================================================
+   追加スタイル: 変更依頼対応
+   ======================================================================== */
+
+/* ── #1/#2 ヒーロー トラストバッジ強調 ── */
+.km-hero__trust-item--primary {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  font-size: 0.82rem;
+  padding: 8px 20px;
+  box-shadow: 0 2px 12px rgba(211, 47, 47, 0.25);
+}
+
+.km-hero__trust-item small {
+  font-size: 0.65rem;
+  vertical-align: super;
+}
+
+/* ── #18 送料注釈 ── */
+.km-hero__shipping-note {
+  font-size: 0.72rem;
+  color: var(--text-sec);
+  margin-top: 8px;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 1024px) {
+  .km-hero__shipping-note {
+    text-align: center;
+  }
+}
+
+/* ── #3 食べ比べ推奨バナー ── */
+.km-categories__recommend {
+  margin-bottom: 40px;
+}
+
+.km-recommend-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background: linear-gradient(135deg, #2E2215 0%, #4A3728 100%);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.4s var(--ease), box-shadow 0.4s ease;
+}
+
+.km-recommend-banner:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+}
+
+.km-recommend-banner__img-wrap {
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.km-recommend-banner__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s var(--ease);
+}
+
+.km-recommend-banner:hover .km-recommend-banner__img {
+  transform: scale(1.04);
+}
+
+.km-recommend-banner__text {
+  padding: 40px 48px;
+}
+
+.km-recommend-banner__badge {
+  display: inline-block;
+  font-family: var(--inter);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+  padding: 4px 14px;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+
+.km-recommend-banner__title {
+  font-family: var(--sans);
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 800;
+  color: #fff;
+  margin-top: 16px;
+  letter-spacing: 0.05em;
+}
+
+.km-recommend-banner__desc {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 12px;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .km-recommend-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .km-recommend-banner__text {
+    padding: 24px;
+  }
+}
+
+/* ── #12 神戸牛ラベル ── */
+.km-product-card__label {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 5px 14px;
+  border-radius: 4px;
+}
+
+.km-product-card__label--kobe {
+  background: linear-gradient(135deg, #B8860B, #DAA520);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(184, 134, 11, 0.4);
+}
+
+/* ── 商品カード 重量表記 ── */
+.km-product-card__weight {
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--text-sec);
+}
+
+/* ── #15 イベントカード ── */
+.km-events__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.km-event-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.4s ease, transform 0.4s var(--ease);
+}
+
+.km-event-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.km-event-card__date {
+  flex-shrink: 0;
+  width: 72px;
+  text-align: center;
+  background: var(--primary);
+  border-radius: var(--radius-sm);
+  padding: 12px 8px;
+  color: #fff;
+}
+
+.km-event-card__month {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.km-event-card__day {
+  display: block;
+  font-family: var(--inter);
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.km-event-card__title {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.km-event-card__venue {
+  font-size: 0.82rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.km-event-card__desc {
+  font-size: 0.82rem;
+  color: var(--text-sec);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .km-events__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .km-event-card {
+    padding: 24px;
+  }
+}
+
+/* ── #17/#18 トラスト注釈 ── */
+.km-trust__note {
+  font-size: 0.68rem;
+  color: var(--text-sec);
+  opacity: 0.8;
+}
