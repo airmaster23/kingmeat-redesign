@@ -803,25 +803,28 @@ ul {
   transform: translateY(-6px);
 }
 
-/* Badge: 画像下の情報エリアにリボン配置（画像テキストと被らない） */
+/* Badge: 画像下部に小さく表示（テキスト入り画像と被らないよう） */
 .product-card__badge {
   position: absolute;
+  bottom: 8px;
+  left: 8px;
   top: auto;
-  bottom: 76px;
-  left: 0;
   z-index: 2;
-  width: auto;
-  height: auto;
-  border-radius: 0 6px 6px 0;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 16px 6px 12px;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
 }
 
 .product-card__badge span {
   font-family: var(--inter);
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: 800;
   color: #fff;
 }
@@ -831,12 +834,12 @@ ul {
   font-size: 0.65rem;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.9);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
 }
 
 .product-card__badge--gold {
   background: linear-gradient(135deg, #FF8F00, #E65100);
-  box-shadow: 0 3px 12px rgba(255, 143, 0, 0.4);
+  box-shadow: 0 2px 8px rgba(255, 143, 0, 0.35);
 }
 
 .product-card__badge--gold::after {
@@ -845,7 +848,7 @@ ul {
 
 .product-card__badge--silver {
   background: linear-gradient(135deg, #78909C, #546E7A);
-  box-shadow: 0 3px 12px rgba(84, 110, 122, 0.3);
+  box-shadow: 0 2px 8px rgba(84, 110, 122, 0.25);
 }
 
 .product-card__badge--silver::after {
@@ -854,11 +857,21 @@ ul {
 
 .product-card__badge--bronze {
   background: linear-gradient(135deg, #E64A19, #BF360C);
-  box-shadow: 0 3px 12px rgba(230, 74, 25, 0.3);
+  box-shadow: 0 2px 8px rgba(230, 74, 25, 0.25);
 }
 
 .product-card__badge--bronze::after {
   content: '人気No.3';
+}
+
+/* 4位以降のデフォルトバッジ */
+.product-card__badge:not([class*="--"]) {
+  background: linear-gradient(135deg, #8D6E63, #6D4C41);
+  box-shadow: 0 2px 8px rgba(109, 76, 65, 0.25);
+}
+
+.product-card__badge:not([class*="--"])::after {
+  content: 'No.4';
 }
 
 .product-card__img-wrap {
@@ -1542,14 +1555,15 @@ ul {
   }
 
   .product-card__badge {
-    width: 32px;
-    height: 32px;
-    top: 8px;
-    left: 8px;
+    bottom: 6px;
+    left: 6px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.6rem;
   }
 
   .product-card__badge span {
-    font-size: 0.72rem;
+    font-size: 0.65rem;
   }
 
   .product-card__info {
