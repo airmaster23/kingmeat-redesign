@@ -822,18 +822,11 @@ ul {
   line-height: 1;
 }
 
-.product-card__badge span {
-  font-family: var(--inter);
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: #fff;
-}
-
 .product-card__badge::after {
   font-family: var(--sans);
   font-size: 0.65rem;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.9);
+  color: #fff;
   letter-spacing: 0.02em;
 }
 
@@ -871,7 +864,7 @@ ul {
 }
 
 .product-card__badge:not([class*="--"])::after {
-  content: 'No.4';
+  content: '人気No.4';
 }
 
 .product-card__img-wrap {
