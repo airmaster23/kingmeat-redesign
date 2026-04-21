@@ -803,39 +803,62 @@ ul {
   transform: translateY(-6px);
 }
 
+/* Badge: 画像下の情報エリアにリボン配置（画像テキストと被らない） */
 .product-card__badge {
   position: absolute;
-  top: 12px;
-  left: 12px;
+  top: auto;
+  bottom: 76px;
+  left: 0;
   z-index: 2;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
+  width: auto;
+  height: auto;
+  border-radius: 0 6px 6px 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 6px;
+  padding: 6px 16px 6px 12px;
 }
 
 .product-card__badge span {
   font-family: var(--inter);
-  font-size: 0.8rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 800;
   color: #fff;
 }
 
+.product-card__badge::after {
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.05em;
+}
+
 .product-card__badge--gold {
-  background: linear-gradient(135deg, #FFD54F, #FF8F00);
+  background: linear-gradient(135deg, #FF8F00, #E65100);
   box-shadow: 0 3px 12px rgba(255, 143, 0, 0.4);
 }
 
+.product-card__badge--gold::after {
+  content: '人気No.1';
+}
+
 .product-card__badge--silver {
-  background: linear-gradient(135deg, #E0E0E0, #9E9E9E);
-  box-shadow: 0 3px 12px rgba(158, 158, 158, 0.3);
+  background: linear-gradient(135deg, #78909C, #546E7A);
+  box-shadow: 0 3px 12px rgba(84, 110, 122, 0.3);
+}
+
+.product-card__badge--silver::after {
+  content: '人気No.2';
 }
 
 .product-card__badge--bronze {
-  background: linear-gradient(135deg, #FFAB91, #E64A19);
+  background: linear-gradient(135deg, #E64A19, #BF360C);
   box-shadow: 0 3px 12px rgba(230, 74, 25, 0.3);
+}
+
+.product-card__badge--bronze::after {
+  content: '人気No.3';
 }
 
 .product-card__img-wrap {
@@ -939,6 +962,10 @@ ul {
 }
 
 /* CRITICAL: Banner images contain text/promotions - show FULL image, NO cropping */
+.campaign-card {
+  border-radius: var(--radius-sm);
+}
+
 .campaign-card__img {
   width: 100%;
   height: auto;
@@ -961,7 +988,7 @@ ul {
   position: relative;
   display: block;
   overflow: hidden;
-  min-height: 520px;
+  min-height: 400px;
 }
 
 .split-feature__img-wrap {
@@ -973,6 +1000,7 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   display: block;
   transition: transform 1.2s var(--ease);
 }
